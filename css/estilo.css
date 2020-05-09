@@ -33,7 +33,7 @@ a.navbar-brand { font-weight: 500; }
 }
 .content__card-image img {
     border-radius: calc(.25rem - 1px);
-    transition: all 1s linear;
+    transition: all .3s linear;
 }
 .content__card-image:hover img {
     transform: scale(1.1);
@@ -52,15 +52,73 @@ a.navbar-brand { font-weight: 500; }
     color: var(--color-red);
     vertical-align: top;
 }
+.content__card-description {
+    min-height: 50px;
+}
 
 /* Pagination */
-.pagination {
-    /* width: 100%;
-    text-align: center; */
+.paginate {
+    width: 100%;
+    text-align: center;
 }
+ul.paginate__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+li.paginate__item {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid var(--color-grey-dark);
+    border-radius: 50%;
+    margin: 0 5px;
+}
+li.paginate__item.active {
+    background-color: var(--color-grey-dark);
+}
+li.paginate__item.active a.paginate__link {
+    color: var(--color-white);
+}
+a.paginate__link {
+    display: block;
+    color: var(--color-gray-dark);
+    font-weight: 700;
+}
+a.paginate__link:hover { text-decoration: none; }
 
 /* Footer */
 .footer { background: var(--color-grey); }
+.footer__copyright { line-height: 50px; }
+.footer__developer span { 
+    font-weight: 600;
+    color: var(--color-red);
+}
+ul.footer__networks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li.footer__networks--items {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 5px;
+    background: var(--color-grey-dark);
+    border-radius: 50%;
+}
+a.footer__networks--link {
+    font-size: 1.5em;
+    color: var(--color-white);
+}
 
 
 /* Responsive screen for device up to 768px */
@@ -96,4 +154,8 @@ a.navbar-brand { font-weight: 500; }
 /* Responsive screen for device up to 1200px */
 @media screen and (min-width: 1200px) {
     .navbar-brand img { width: 8%;}
+    .header__info { 
+        font-size: 1.1em; 
+        font-weight: 300;
+    }
 }
