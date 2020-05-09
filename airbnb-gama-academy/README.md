@@ -1,1 +1,0 @@
-# airbnb-gama-academy
