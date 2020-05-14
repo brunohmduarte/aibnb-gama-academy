@@ -20,6 +20,28 @@ body {
 .navbar {
     background: var(--color-white);
 }
+.navbar__logo {
+    flex: 1;
+    order: 0;
+}
+.navbar__logo img { width: 30%; }
+.navbar__logo strong { font-size: 1.2em; }
+.navbar__formsearch {
+    order: 2;
+    margin-top: 2%;
+}
+.navbar__formsearch input[name=filter] {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+button#button-search {
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.navbar__gamaacademy {
+    flex: 1;
+    order: 1;
+}
 a.navbar-brand { font-weight: 500; }
 .header__info { font-size: .7em; }
 
@@ -52,7 +74,7 @@ a.navbar-brand { font-weight: 500; }
     color: var(--color-red);
     vertical-align: top;
 }
-.content__card-description {
+.card-title {
     min-height: 50px;
 }
 
@@ -90,6 +112,12 @@ a.paginate__link {
 }
 a.paginate__link:hover { text-decoration: none; }
 
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
 /* Footer */
 .footer { background: var(--color-grey); }
 .footer__copyright { line-height: 50px; }
@@ -124,6 +152,19 @@ a.footer__networks--link {
 /* Responsive screen for device up to 768px */
 @media screen and (min-width: 768px) {
     .navbar-brand > strong { font-size: 1.6rem; }
+    .navbar__logo {
+        flex: 1;
+        order: 0;
+    }
+    .navbar__formsearch {
+        order: 1;
+        margin-top: 0;
+        flex: 1;
+    }
+    .navbar__gamaacademy {
+        flex: 1;
+        order: 3;
+    }
     h3.header__title{ 
         font-size: 1.85rem; 
         font-weight: 600;
@@ -141,6 +182,7 @@ a.footer__networks--link {
 /* Responsive screen for device up to 992px */
 @media screen and (min-width: 992px) {
     .header__info { font-size: initial; }
+    .navbar__formsearch { flex: 2; }
     h3.header__title { font-size: 1.95rem; }
     .card-text { font-size: initial; }
     .card-text strong { 
